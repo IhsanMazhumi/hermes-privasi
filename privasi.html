@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kebijakan Privasi — Hermes Ihsan Pribadi</title>
+<style>
+  :root {
+    --teks: #1c2321; --redup: #5b6763; --latar: #fbfdfb; --kartu: #ffffff;
+    --garis: #dfe5e1; --aksen: #0a3b2a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --teks: #d8e6df; --redup: #9aa8a2; --latar: #0a1612; --kartu: #111f1a;
+      --garis: #2b3733; --aksen: #99d3b8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 3rem 1.25rem; background: var(--latar); color: var(--teks);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; background: var(--kartu);
+    border: 1px solid var(--garis); border-radius: 14px; padding: 2.25rem 2rem; }
+  h1 { font-size: 1.5rem; margin: 0 0 .35rem; }
+  .sub { color: var(--redup); margin: 0 0 1.75rem; }
+  h2 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+  a { color: var(--aksen); }
+  ul { padding-left: 1.15rem; }
+  li { margin: .3rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: .75rem 0; font-size: .94rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--garis);
+    vertical-align: top; }
+  th { color: var(--redup); font-weight: 600; }
+  footer { margin-top: 2.25rem; padding-top: 1rem; border-top: 1px solid var(--garis);
+    color: var(--redup); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kebijakan Privasi</h1>
+  <p class="sub">Hermes Ihsan Pribadi — terakhir diperbarui 2 Oktober 2026</p>
+
+  <p>
+    Aplikasi <strong>Hermes Ihsan Pribadi</strong> adalah klien OAuth pribadi yang
+    hanya melayani <strong>satu pengguna</strong>: pemilik akun Google yang memberikan
+    izinnya. Kebijakan ini menjelaskan data apa yang diakses dan apa yang terjadi
+    padanya.
+  </p>
+
+  <h2>Data apa yang diakses</h2>
+  <p>Aplikasi hanya mengakses data pada akun Google pemiliknya sendiri, dengan izin berikut:</p>
+  <table>
+    <tr><th>Cakupan izin</th><th>Untuk apa</th></tr>
+    <tr><td>Google Drive</td><td>Mengunggah, mencari, mengunduh, dan mengelola berkas milik pemilik akun</td></tr>
+    <tr><td>Google Sheets</td><td>Membaca dan mengisi spreadsheet milik pemilik akun</td></tr>
+    <tr><td>Google Docs</td><td>Membaca dan menulis dokumen milik pemilik akun</td></tr>
+    <tr><td>Google Forms</td><td>Membuat form dan membaca jawabannya atas permintaan pemilik akun</td></tr>
+  </table>
+  <p>Tidak ada cakupan izin untuk Gmail, Kalender, atau Kontak.</p>
+
+  <h2>Di mana datanya disimpan</h2>
+  <ul>
+    <li><strong>Tidak ada server</strong> milik pengembang aplikasi. Seluruh proses berjalan
+        di komputer pemilik akun.</li>
+    <li>Token izin disimpan lokal di komputer itu (folder <code>~/.hermes</code>) dan
+        hanya dipakai untuk memanggil API Google atas nama pemiliknya.</li>
+    <li>Tidak ada data yang dikirimkan ke pihak ketiga, tidak ada analitik, tidak ada
+        iklan, dan tidak ada penjualan data.</li>
+  </ul>
+
+  <h2>Pembagian data</h2>
+  <p>
+    Tidak ada. Data tidak dibagikan kepada siapa pun. Isi berkas dan spreadsheet tidak
+    pernah dibaca pengembang aplikasi secara terpisah dari pemilik akun, dan tidak
+    dipakai untuk keperluan lain selain perintah yang diberikan pemilik akun.
+  </p>
+
+  <h2>Mencabut izin dan menghapus data</h2>
+  <ul>
+    <li>Buka <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+        lalu hapus akses aplikasi ini. Izin berlaku surut: setelah dicabut, aplikasi
+        tidak bisa lagi mengakses data apa pun.</li>
+    <li>Menghapus berkas token di komputer (<code>~/.hermes/google_token.json</code>)
+        juga memutus akses, karena aplikasi tidak menyimpan salinan lain.</li>
+  </ul>
+
+  <h2>Kontak</h2>
+  <p>
+    Pertanyaan tentang kebijakan ini dapat disampaikan melalui
+    <a href="https://github.com/IhsanMazhumi/hermes-privasi/issues">halaman Issues repositori</a>.
+  </p>
+
+  <footer>Halaman ini disajikan lewat GitHub Pages dan tidak menggunakan cookie maupun pelacak.</footer>
+</main>
+</body>
+</html>
